@@ -2030,17 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./resources/js/dashboard/views/App.js?vue&type=script&lang=js&":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./resources/js/dashboard/views/App.js?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
@@ -2072,7 +2061,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.adminFooter[data-v-8f142a66] {\n  display: flex;\n  flex-flow: row;\n  justify-content: flex-end;\n  align-items: center;\n  background-color: darkgrey;\n  height: 50px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n.adminFooterTexte[data-v-8f142a66] {\n    position: relative;\n    right: 5%;\n}\n", ""]);
+exports.push([module.i, "\n.adminFooter[data-v-8f142a66] {\n  display: flex;\n  flex-flow: row;\n  justify-content: flex-end;\n  align-items: center;\n  background-color: darkgrey;\n  height: 30px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n.adminFooterTexte[data-v-8f142a66] {\n    position: relative;\n    right: 5%;\n}\n", ""]);
 
 // exports
 
@@ -20519,7 +20508,118 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-container", [_c("p", [_vm._v("DASHBOARD !!!")])])
+  return _c(
+    "div",
+    [
+      _c(
+        "v-card",
+        { attrs: { flat: "" } },
+        [
+          _c(
+            "v-card-text",
+            [
+              _c(
+                "v-row",
+                { staticClass: "mb-4", attrs: { align: "center" } },
+                [_c("v-spacer")],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-container",
+                [
+                  _c("h1", { staticClass: "text-center justify-center py-6" }, [
+                    _vm._v("Presentation du projet")
+                  ]),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("v-container", [
+                    _vm._v(
+                      "\n            Mémoire numérique est un projet porté par des jeunes Trois-Bassinois qui a pour ambition de réaliser une mémoire numérique des Hauts avec l'ensemble des acteurs qui ont contribué à la construction et l'épanouissement de ce territoire. Face au choc générationnel et à la modernisation de la communication, les jeunes ne bénéficient plus autant de la transmission orale de l'histoire et des valeurs qu'habituellement nos aïeuls nous transmettent.\n            "
+                    ),
+                    _c("p", [
+                      _vm._v(
+                        "Ce projet est un moyen populaire et actuel de renouer cette tradition avec les jeunes."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Ce mémoire reste accessible à tous et est entièrement gratuit. L'idée générale est également de créer des liens entre la Réunion « lontan » et la Réunion actuelle pour la Réunion « future ». Nous recueillerons des témoignages des les domaines composant les Hauts : culture, l'agriculture ancienne, l'économie, le sociétal, etc..."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Les interviews sont réalisées avec tous types d'acteurs dans les Hauts : associations, personnes âgées, institutions publiques, économiques, agriculteurs, artistes, etc... Les gramouns sont à l'honneur !"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Nous avons encore la chance d'avoir des Réunionnais et des Réunionnaises qui ont vécu l'époque « lontan », c'est notre devoir de préserver notre histoire pour nous et les générations futures !"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "« Les Hauts ne sont pas un espace de l'écrit, c'est celui de la paroles et de la mémoire », extrait de l'art de vivre dans les Hauts, C. Barat et R. Robert, 2005.\n                Les Hauts sont riches d'un petit patrimoine diversifié : cases créoles intégrées à leur environnement, vestiges d'ouvrages hydrauliques, édifices religieux témoignant de la variété des cultes, anciens chemins pavés ou encore réseaux de « sentiers Peï » sillonnant la forêt. Les Hauts sont également dépositaires d'un riche patrimoine immatériel. La langue créole est intimement liée à l'identité réunionnaise ; elle s'est enrichie au fil des siècles de mots d'origine malgache, indienne ou chinoise."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "La mémoire collective conserve encore de nombreux événements reflétant l'histoire ou la vie quotidienne d'autrefois, ainsi que des superstitions, des savoir faire architecturaux, artisanaux culinaires ou médicaux... Notre époque actuelle nous permet encore de retranscrire de façon authentique cette vie passée avec des témoignages de nos « gramouns ». Les générations futures n'auront pas cette chance car nous seront des « gramouns » d'une autre époque résultant de l'ère contemporaine."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Solidarité, partage et convivialité sont des valeurs ancrées dans l'art de vivre de ces territoires, où l'homme a développé une relation étroite et particulière avec la nature. En outre, la vie dans les Hauts reflète de façon la plus authentique le savoir-faire et les traditions. Il est d'une importance capitale que les réunionnais en prennent pleinement conscience et puissent créer cette mémoire collective pour les nouvelles générations assoiffées de leurs histoire. Comme dirait le groupe de musique réunionnais LINDIGO, tiré de LafrkindMada : « Kan ou koné oussa ou sorte, Ou koné oussa ou sava, Mwin lé né la Réunion, Oussa néna tout ban nasyon »."
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "text-center justify-center py-6" }, [
+                    _vm._v("Presentation de Cyberun")
+                  ]),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("v-container", [
+                    _c("p", [
+                      _vm._v(
+                        "Cyberun  est une association  qui met le numérique au service de la Solidarité et du développement  local durable.\n                Nos compétences numériques sont mobilisées pour servir la mémoire réunionnaise dans son ensemble. L’île étant l’épicentre de la rencontre entre différentes cultures, mais également  le creuset d’un patrimoine  naturel inégalé.\n                Notre démarche s’appuie sur une équipe soudée faisant valoir tout un faisceau de compétences diverses et mettant du cœur à l’ouvrage."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Qu’il s’agisse de sauvegarde de la mémoire, de tourisme solidaire, de réduction de la Fracture numérique ou encore de valorisation des initiatives durables, nos actions sont menées autours d’une seule et même ligne de conduite régissant nos vertus et nos  actions."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "En ce sens, tous nos projets s’articulent  autour des notions d’innovation, de solidarité, de Tradition et de Divertissement. Site : "
+                      ),
+                      _c("a", { attrs: { href: "http://cyberun.org/" } }, [
+                        _vm._v("Cyberun.org")
+                      ]),
+                      _vm._v(". ")
+                    ])
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -78036,44 +78136,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/dashboard/views/App.js?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/dashboard/views/App.js?vue&type=script&lang=js& ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!./App.js?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./resources/js/dashboard/views/App.js?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "./resources/js/dashboard/views/App.vue":
 /*!**********************************************!*\
   !*** ./resources/js/dashboard/views/App.vue ***!
   \**********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_vue_vue_type_template_id_f97844d2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=f97844d2& */ "./resources/js/dashboard/views/App.vue?vue&type=template&id=f97844d2&");
-/* harmony import */ var _App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.js?vue&type=script&lang=js& */ "./resources/js/dashboard/views/App.js?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
+var script = {}
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _App_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
   _App_vue_vue_type_template_id_f97844d2___WEBPACK_IMPORTED_MODULE_0__["render"],
   _App_vue_vue_type_template_id_f97844d2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,

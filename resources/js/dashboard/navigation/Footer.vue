@@ -11,7 +11,7 @@
   justify-content: flex-end;
   align-items: center;
   background-color: darkgrey;
-  height: 50px;
+  height: 30px;
   position: fixed;
   bottom: 0;
   width: 100%;
