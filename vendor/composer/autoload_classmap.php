@@ -6,18 +6,26 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
-    'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
-    'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-    'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-=======
     'App\\Categories' => $baseDir . '/app/Categories.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\ContactModel' => $baseDir . '/app/ContactModel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AccueilController' => $baseDir . '/app/Http/Controllers/AccueilController.php',
+    'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
+    'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
+    'App\\Http\\Controllers\\CategoriesController' => $baseDir . '/app/Http/Controllers/CategoriesController.php',
+    'App\\Http\\Controllers\\ConnectionController' => $baseDir . '/app/Http/Controllers/ConnectionController.php',
+    'App\\Http\\Controllers\\ContactController' => $baseDir . '/app/Http/Controllers/ContactController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\JeParticipeController' => $baseDir . '/app/Http/Controllers/JeParticipeController.php',
+    'App\\Http\\Controllers\\MediaController' => $baseDir . '/app/Http/Controllers/MediaController.php',
+    'App\\Http\\Controllers\\MediathequeController' => $baseDir . '/app/Http/Controllers/MediathequeController.php',
+    'App\\Http\\Controllers\\MemoiresController' => $baseDir . '/app/Http/Controllers/MemoiresController.php',
+    'App\\Http\\Controllers\\RechercheController' => $baseDir . '/app/Http/Controllers/RechercheController.php',
     'App\\Http\\Controllers\\SinglePageController' => $baseDir . '/app/Http/Controllers/SinglePageController.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
+    'App\\Http\\Controllers\\TypesController' => $baseDir . '/app/Http/Controllers/TypesController.php',
+    'App\\Http\\Controllers\\UsersController' => $baseDir . '/app/Http/Controllers/UsersController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -27,24 +35,23 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
-<<<<<<< HEAD
-=======
+    'App\\Http\\Resources\\CategoriesRessource' => $baseDir . '/app/Http/Resources/CategoriesRessource.php',
+    'App\\Http\\Resources\\MediaTypesRessource' => $baseDir . '/app/Http/Resources/MediaTypesRessource.php',
+    'App\\Http\\Resources\\MediasRessource' => $baseDir . '/app/Http/Resources/MediasRessource.php',
+    'App\\Http\\Resources\\MemoireStatusRessource' => $baseDir . '/app/Http/Resources/MemoireStatusRessource.php',
+    'App\\Http\\Resources\\MemoiresRessource' => $baseDir . '/app/Http/Resources/MemoiresRessource.php',
     'App\\JeParticipeModel' => $baseDir . '/app/JeParticipeModel.php',
     'App\\Media' => $baseDir . '/app/Media.php',
     'App\\Mediatype' => $baseDir . '/app/Mediatype.php',
     'App\\Memoire' => $baseDir . '/app/Memoire.php',
     'App\\MemoireStatus' => $baseDir . '/app/MemoireStatus.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\User' => $baseDir . '/app/User.php',
-<<<<<<< HEAD
-=======
     'App\\Users' => $baseDir . '/app/Users.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
@@ -130,10 +137,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
-<<<<<<< HEAD
-=======
     'CategoriesSeeder' => $baseDir . '/database/seeds/CategoriesSeeder.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -143,11 +147,7 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-<<<<<<< HEAD
-    'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
-=======
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder copy.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -172,9 +172,6 @@ return array(
     'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
     'DeepCopy\\TypeFilter\\TypeFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
     'DeepCopy\\TypeMatcher\\TypeMatcher' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
-<<<<<<< HEAD
-    'Doctrine\\Common\\Lexer\\AbstractLexer' => $vendorDir . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
-=======
     'Doctrine\\Common\\Cache\\ApcCache' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php',
     'Doctrine\\Common\\Cache\\ApcuCache' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcuCache.php',
     'Doctrine\\Common\\Cache\\ArrayCache' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/ArrayCache.php',
@@ -462,7 +459,6 @@ return array(
     'Doctrine\\DBAL\\Types\\VarDateTimeType' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php',
     'Doctrine\\DBAL\\Version' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Version.php',
     'Doctrine\\DBAL\\VersionAwarePlatformDriver' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/VersionAwarePlatformDriver.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'Doctrine\\Inflector\\CachedWordInflector' => $vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php',
     'Doctrine\\Inflector\\GenericLanguageInflectorFactory' => $vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php',
     'Doctrine\\Inflector\\Inflector' => $vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector/Inflector.php',
@@ -2426,11 +2422,8 @@ return array(
     'League\\Flysystem\\Util\\ContentListingFormatter' => $vendorDir . '/league/flysystem/src/Util/ContentListingFormatter.php',
     'League\\Flysystem\\Util\\MimeType' => $vendorDir . '/league/flysystem/src/Util/MimeType.php',
     'League\\Flysystem\\Util\\StreamHasher' => $vendorDir . '/league/flysystem/src/Util/StreamHasher.php',
-<<<<<<< HEAD
-=======
     'Media_TypeSeeder' => $baseDir . '/database/seeds/Media_TypeSeeder.php',
     'Memoire_StatusSeeder' => $baseDir . '/database/seeds/Memoire_StatusSeeder.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'Mockery' => $vendorDir . '/mockery/mockery/library/Mockery.php',
     'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => $vendorDir . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
     'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => $vendorDir . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',
@@ -4561,11 +4554,8 @@ return array(
     'Symfony\\Polyfill\\Php72\\Php72' => $vendorDir . '/symfony/polyfill-php72/Php72.php',
     'Symfony\\Polyfill\\Php73\\Php73' => $vendorDir . '/symfony/polyfill-php73/Php73.php',
     'Symfony\\Polyfill\\Php80\\Php80' => $vendorDir . '/symfony/polyfill-php80/Php80.php',
-<<<<<<< HEAD
-=======
     'TestMediaSeeder' => $baseDir . '/database/seeds/TestMediaSeeder.php',
     'TestMemoireSeeder' => $baseDir . '/database/seeds/TestMemoireSeeder.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'Tests\\CreatesApplication' => $baseDir . '/tests/CreatesApplication.php',
     'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
     'Tests\\TestCase' => $baseDir . '/tests/TestCase.php',
@@ -4585,10 +4575,7 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
-<<<<<<< HEAD
-=======
     'UsersSeeder' => $baseDir . '/database/seeds/UsersSeeder.php',
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
     'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',

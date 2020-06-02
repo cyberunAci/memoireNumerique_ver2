@@ -1,5 +1,7 @@
 <template>
     <v-container>
-        <p>ADMINISTRATEUR !!!</p>
+        <TableAdmin></TableAdmin>
     </v-container>
 </template>
+
+<script src="./Administrateur.js"></script>
