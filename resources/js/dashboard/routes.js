@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from "./views/Home.vue";
-
-
+import App from './views/App.vue';
+import Service from './views/Service.vue';
+import Mediatheque from './views/Mediatheque.vue';
+import Administrateur from './views/Administrateur.vue';
 
 Vue.use(VueRouter);
 
@@ -11,8 +12,23 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Home,
+            name: 'accueil',
+            component: App,
+        },
+        {
+            path: '/service',
+            name: 'service',
+            component: Service, 
+        },
+        {
+            path: '/mediatheque',
+            name: 'mediatheque',
+            component: Mediatheque, 
+        },
+        {
+            path: '/administrateur',
+            name: 'administrateur',
+            component: Administrateur, 
         },
     ]
 })

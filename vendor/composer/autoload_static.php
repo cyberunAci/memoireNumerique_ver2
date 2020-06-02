@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004
+class ComposerStaticInit2c0ded30002ea67baf8d3512dd2d5cb1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -494,8 +494,22 @@ class ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\ContactModel' => __DIR__ . '/../..' . '/app/ContactModel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AccueilController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccueilController.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
+        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
+        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
+        'App\\Http\\Controllers\\ConnectionController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConnectionController.php',
+        'App\\Http\\Controllers\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\JeParticipeController' => __DIR__ . '/../..' . '/app/Http/Controllers/JeParticipeController.php',
+        'App\\Http\\Controllers\\MediaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediaController.php',
+        'App\\Http\\Controllers\\MediathequeController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediathequeController.php',
+        'App\\Http\\Controllers\\MemoiresController' => __DIR__ . '/../..' . '/app/Http/Controllers/MemoiresController.php',
+        'App\\Http\\Controllers\\RechercheController' => __DIR__ . '/../..' . '/app/Http/Controllers/RechercheController.php',
         'App\\Http\\Controllers\\SinglePageController' => __DIR__ . '/../..' . '/app/Http/Controllers/SinglePageController.php',
+        'App\\Http\\Controllers\\TypesController' => __DIR__ . '/../..' . '/app/Http/Controllers/TypesController.php',
+        'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -505,6 +519,11 @@ class ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Resources\\CategoriesRessource' => __DIR__ . '/../..' . '/app/Http/Resources/CategoriesRessource.php',
+        'App\\Http\\Resources\\MediaTypesRessource' => __DIR__ . '/../..' . '/app/Http/Resources/MediaTypesRessource.php',
+        'App\\Http\\Resources\\MediasRessource' => __DIR__ . '/../..' . '/app/Http/Resources/MediasRessource.php',
+        'App\\Http\\Resources\\MemoireStatusRessource' => __DIR__ . '/../..' . '/app/Http/Resources/MemoireStatusRessource.php',
+        'App\\Http\\Resources\\MemoiresRessource' => __DIR__ . '/../..' . '/app/Http/Resources/MemoiresRessource.php',
         'App\\JeParticipeModel' => __DIR__ . '/../..' . '/app/JeParticipeModel.php',
         'App\\Media' => __DIR__ . '/../..' . '/app/Media.php',
         'App\\Mediatype' => __DIR__ . '/../..' . '/app/Mediatype.php',
@@ -5140,10 +5159,10 @@ class ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit9605e64f98cd35e94c37fcf5a0d69004::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2c0ded30002ea67baf8d3512dd2d5cb1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2c0ded30002ea67baf8d3512dd2d5cb1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2c0ded30002ea67baf8d3512dd2d5cb1::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2c0ded30002ea67baf8d3512dd2d5cb1::$classMap;
 
         }, null, ClassLoader::class);
     }

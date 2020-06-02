@@ -1,3 +1,17 @@
 ./node_modules
+<<<<<<< HEAD
 ./vendor
 .env
+=======
+./public/hot
+./public/storage
+./storage/*.key
+./vendor
+.env
+.env.backup
+.phpunit.result.cache
+.Homestead.json
+.Homestead.yaml
+.npm-debug.log
+.yarn-error.log
+>>>>>>> 40061df06f20ec509c76911e306e7586b6f7d000
