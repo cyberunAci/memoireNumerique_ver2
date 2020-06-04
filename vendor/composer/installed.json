@@ -137,8 +137,6 @@
         "description": "implementation of xdg base directory specification for php"
     },
     {
-<<<<<<< HEAD
-=======
         "name": "doctrine/cache",
         "version": "1.10.1",
         "version_normalized": "1.10.1.0",
@@ -397,7 +395,6 @@
         ]
     },
     {
->>>>>>> e10f4e3ad74233aa606250748feecf9bbb3a34c0
         "name": "doctrine/inflector",
         "version": "2.0.3",
         "version_normalized": "2.0.3.0",
