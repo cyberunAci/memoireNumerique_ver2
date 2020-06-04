@@ -86,26 +86,6 @@
     </v-row>
 
 
-    <v-row>
-      <v-card v-for="(circuit,key) in circuits" :key="key" class="mx-auto my-5" max-width="500">
-        <v-container fluid>
-          <v-row dense>
-            <v-col :cols="12">
-              <v-img
-                :src="circuit.image"
-                class="white--text align-end"
-                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                height="200px"
-              ></v-img>
-            </v-col>
-          </v-row>
-          <v-row></v-row>
-        </v-container>
-      </v-card>
-    </v-row>
-
-
-
 
 <v-divider></v-divider>
 

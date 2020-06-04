@@ -20825,56 +20825,6 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c(
-        "v-row",
-        _vm._l(_vm.circuits, function(circuit, key) {
-          return _c(
-            "v-card",
-            {
-              key: key,
-              staticClass: "mx-auto my-5",
-              attrs: { "max-width": "500" }
-            },
-            [
-              _c(
-                "v-container",
-                { attrs: { fluid: "" } },
-                [
-                  _c(
-                    "v-row",
-                    { attrs: { dense: "" } },
-                    [
-                      _c(
-                        "v-col",
-                        { attrs: { cols: 12 } },
-                        [
-                          _c("v-img", {
-                            staticClass: "white--text align-end",
-                            attrs: {
-                              src: circuit.image,
-                              gradient:
-                                "to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)",
-                              height: "200px"
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-row")
-                ],
-                1
-              )
-            ],
-            1
-          )
-        }),
-        1
-      ),
-      _vm._v(" "),
       _c("v-divider"),
       _vm._v(" "),
       _c("h2", { staticClass: "pa-2 text-center purple lighten-2 float" }, [
