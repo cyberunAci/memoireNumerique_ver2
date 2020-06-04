@@ -20415,81 +20415,56 @@ var render = function() {
                   ]),
                   _c("br"),
                   _vm._v(" "),
-                  _c("v-container", [
-                    _vm._v(
-                      "\n            Mémoire numérique est un projet porté par des jeunes Trois-Bassinois qui a pour ambition de réaliser une mémoire numérique des Hauts avec l'ensemble des acteurs qui ont contribué à la construction et l'épanouissement de ce territoire. Face au choc générationnel et à la modernisation de la communication, les jeunes ne bénéficient plus autant de la transmission orale de l'histoire et des valeurs qu'habituellement nos aïeuls nous transmettent.\n            "
-                    ),
-                    _c("p", [
-                      _vm._v(
-                        "Ce projet est un moyen populaire et actuel de renouer cette tradition avec les jeunes."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Ce mémoire reste accessible à tous et est entièrement gratuit. L'idée générale est également de créer des liens entre la Réunion « lontan » et la Réunion actuelle pour la Réunion « future ». Nous recueillerons des témoignages des les domaines composant les Hauts : culture, l'agriculture ancienne, l'économie, le sociétal, etc..."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Les interviews sont réalisées avec tous types d'acteurs dans les Hauts : associations, personnes âgées, institutions publiques, économiques, agriculteurs, artistes, etc... Les gramouns sont à l'honneur !"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Nous avons encore la chance d'avoir des Réunionnais et des Réunionnaises qui ont vécu l'époque « lontan », c'est notre devoir de préserver notre histoire pour nous et les générations futures !"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "« Les Hauts ne sont pas un espace de l'écrit, c'est celui de la paroles et de la mémoire », extrait de l'art de vivre dans les Hauts, C. Barat et R. Robert, 2005.\n                Les Hauts sont riches d'un petit patrimoine diversifié : cases créoles intégrées à leur environnement, vestiges d'ouvrages hydrauliques, édifices religieux témoignant de la variété des cultes, anciens chemins pavés ou encore réseaux de « sentiers Peï » sillonnant la forêt. Les Hauts sont également dépositaires d'un riche patrimoine immatériel. La langue créole est intimement liée à l'identité réunionnaise ; elle s'est enrichie au fil des siècles de mots d'origine malgache, indienne ou chinoise."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "La mémoire collective conserve encore de nombreux événements reflétant l'histoire ou la vie quotidienne d'autrefois, ainsi que des superstitions, des savoir faire architecturaux, artisanaux culinaires ou médicaux... Notre époque actuelle nous permet encore de retranscrire de façon authentique cette vie passée avec des témoignages de nos « gramouns ». Les générations futures n'auront pas cette chance car nous seront des « gramouns » d'une autre époque résultant de l'ère contemporaine."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Solidarité, partage et convivialité sont des valeurs ancrées dans l'art de vivre de ces territoires, où l'homme a développé une relation étroite et particulière avec la nature. En outre, la vie dans les Hauts reflète de façon la plus authentique le savoir-faire et les traditions. Il est d'une importance capitale que les réunionnais en prennent pleinement conscience et puissent créer cette mémoire collective pour les nouvelles générations assoiffées de leurs histoire. Comme dirait le groupe de musique réunionnais LINDIGO, tiré de LafrkindMada : « Kan ou koné oussa ou sorte, Ou koné oussa ou sava, Mwin lé né la Réunion, Oussa néna tout ban nasyon »."
-                      )
-                    ])
-                  ]),
+                  _c(
+                    "v-container",
+                    { staticClass: "text-center justify-center py-6" },
+                    [
+                      _c("p", [
+                        _vm._v(
+                          "Mémoire numérique est un projet porté par des jeunes Trois-Bassinois qui a pour ambition de réaliser une mémoire numérique des Hauts avec l'ensemble des acteurs qui ont contribué à la construction et l'épanouissement de ce territoire."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n            Face au choc générationnel et à la modernisation de la communication, les jeunes ne bénéficient plus autant de la transmission orale de l'histoire et des valeurs qu'habituellement nos aïeuls nous transmettent.\n            Ce projet est un moyen populaire et actuel de renouer cette tradition avec les jeunes. Ce mémoire reste accessible à tous et est entièrement gratuit. L'idée générale est également de créer des liens entre la Réunion « lontan » et la Réunion actuelle pour la Réunion « future ». \n            Nous recueillerons des témoignages des les domaines composant les Hauts : culture, l'agriculture ancienne, l'économie, le sociétal, etc...\n            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n            Les interviews sont réalisées avec tous types d'acteurs dans les Hauts : associations, personnes âgées, institutions publiques, économiques, agriculteurs, artistes, etc... Les gramouns sont à l'honneur !\n            Nous avons encore la chance d'avoir des Réunionnais et des Réunionnaises qui ont vécu l'époque « lontan », c'est notre devoir de préserver notre histoire pour nous et les générations futures !\n            « Les Hauts ne sont pas un espace de l'écrit, c'est celui de la paroles et de la mémoire », extrait de l'art de vivre dans les Hauts, C. Barat et R. Robert, 2005.\n            Les Hauts sont riches d'un petit patrimoine diversifié : cases créoles intégrées à leur environnement, vestiges d'ouvrages hydrauliques, édifices religieux témoignant de la variété des cultes, anciens chemins pavés ou encore réseaux de « sentiers Peï » sillonnant la forêt. \n            Les Hauts sont également dépositaires d'un riche patrimoine immatériel. La langue créole est intimement liée à l'identité réunionnaise ; elle s'est enrichie au fil des siècles de mots d'origine malgache, indienne ou chinoise."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n            La mémoire collective conserve encore de nombreux événements reflétant l'histoire ou la vie quotidienne d'autrefois, ainsi que des superstitions, des savoir faire architecturaux, artisanaux culinaires ou médicaux... \n            Notre époque actuelle nous permet encore de retranscrire de façon authentique cette vie passée avec des témoignages de nos « gramouns ». \n            Les générations futures n'auront pas cette chance car nous seront des « gramouns » d'une autre époque résultant de l'ère contemporaine.\n            Solidarité, partage et convivialité sont des valeurs ancrées dans l'art de vivre de ces territoires, où l'homme a développé une relation étroite et particulière avec la nature. \n            En outre, la vie dans les Hauts reflète de façon la plus authentique le savoir-faire et les traditions. \n            Il est d'une importance capitale que les réunionnais en prennent pleinement conscience et puissent créer cette mémoire collective pour les nouvelles générations assoiffées de leurs histoire. \n            Comme dirait le groupe de musique réunionnais LINDIGO, tiré de LafrikndMada : « Kan ou koné oussa ou sorte, Ou koné oussa ou sava, Mwin lé né la Réunion, Oussa néna tout ban nasyon »."
+                        )
+                      ])
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("h1", { staticClass: "text-center justify-center py-6" }, [
                     _vm._v("Presentation de Cyberun")
                   ]),
                   _c("br"),
                   _vm._v(" "),
-                  _c("v-container", [
-                    _c("p", [
-                      _vm._v(
-                        "Cyberun  est une association  qui met le numérique au service de la Solidarité et du développement  local durable.\n                Nos compétences numériques sont mobilisées pour servir la mémoire réunionnaise dans son ensemble. L’île étant l’épicentre de la rencontre entre différentes cultures, mais également  le creuset d’un patrimoine  naturel inégalé.\n                Notre démarche s’appuie sur une équipe soudée faisant valoir tout un faisceau de compétences diverses et mettant du cœur à l’ouvrage."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Qu’il s’agisse de sauvegarde de la mémoire, de tourisme solidaire, de réduction de la Fracture numérique ou encore de valorisation des initiatives durables, nos actions sont menées autours d’une seule et même ligne de conduite régissant nos vertus et nos  actions."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "En ce sens, tous nos projets s’articulent  autour des notions d’innovation, de solidarité, de Tradition et de Divertissement. Site : "
-                      ),
-                      _c("a", { attrs: { href: "http://cyberun.org/" } }, [
-                        _vm._v("Cyberun.org")
-                      ]),
-                      _vm._v(". ")
-                    ])
-                  ])
+                  _c(
+                    "v-container",
+                    { staticClass: "text-center justify-center py-6" },
+                    [
+                      _c("p", [
+                        _vm._v(
+                          " \n                Cyberun  est une association  qui met le numérique au service de la Solidarité et du développement  local durable.\n                Nos compétences numériques sont mobilisées pour servir la mémoire réunionnaise dans son ensemble. L’île étant l’épicentre de la rencontre entre différentes cultures, mais également  le creuset d’un patrimoine  naturel inégalé.\n                Notre démarche s’appuie sur une équipe soudée faisant valoir tout un faisceau de compétences diverses et mettant du cœur à l’ouvrage.\n                Qu’il s’agisse de sauvegarde de la mémoire, de tourisme solidaire, de réduction de la Fracture numérique ou encore de valorisation des initiatives durables, nos actions sont menées autours d’une seule et même ligne de conduite régissant nos vertus et nos  actions\n                En ce sens, tous nos projets s’articulent  autour des notions d’innovation, de solidarité, de Tradition et de Divertissement. Site : "
+                        ),
+                        _c("a", { attrs: { href: "http://cyberun.org/" } }, [
+                          _vm._v("Cyberun.org")
+                        ]),
+                        _vm._v(". \n                ")
+                      ])
+                    ]
+                  )
                 ],
                 1
               )
