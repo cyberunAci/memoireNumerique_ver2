@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ConnectionController extends Controller
 {
 function index() {
-return view('admin/form');
+return view('admin.form');
 }
 
 
