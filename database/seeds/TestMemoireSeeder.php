@@ -23,6 +23,7 @@ class TestMemoireSeeder extends Seeder
                 'id_categorie' => '1',
                 'id_status' => '1',
                 'id_media' => '1',
+                
             ],
             [   
                 'id' => 2,

@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 Route::get('memoires', 'MemoiresController@getMemoires');
 Route::post('memoires', 'MemoiresController@addOrUpdate');
 Route::get('selects', 'MemoiresController@getAllSelect');
+=======
+
+Route::get('/environnement', 'CategoriesController@getEnvironnement');
+>>>>>>> 0b08ccc41b7453a81482dccb1969362d13863c2d

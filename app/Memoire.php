@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Memoire extends Model
 {
   protected $table = 'memoire';
-  public $timestamps = false;
+  public $timestamps = true;
   protected $fillable = ['id', 'titre', 'resumer', 'description', 'auteur', 'id_categorie', 'id_media', 'id_status'];
 
   //Relation  one to one -> media
