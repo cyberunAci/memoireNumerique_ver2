@@ -1,6 +1,8 @@
 <template>
-  <v-container>
-    <div class="derniere-video">Derniers ajouts</div>
+  <v-container class="float">
+
+    <h2 class="pa-2 text-center purple lighten-2 float">DERNIERS AJOUTS</h2><br>
+
     <template>
       <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
         <v-carousel-item v-for="(slide, i) in slides" :key="i">
@@ -12,6 +14,8 @@
         </v-carousel-item>
       </v-carousel>
     </template>
+
+<v-divider></v-divider>
 
     <v-row>
       <v-col md="3" sm="3">
@@ -48,9 +52,11 @@
       </v-col>
     </v-row>
 
-    <div class="audio">
-      <p>Audio</p>
-    </div>
+<v-divider></v-divider>
+
+ 
+    <h2 class="pa-2 text-center purple lighten-2 float">AUDIO</h2><br>
+
 
     <v-row>
       <v-col md="3">
@@ -77,12 +83,14 @@
       <v-col md="3">
         <img src="https://via.placeholder.com/250" alt />
       </v-col>
-
     </v-row>
 
-    <div class="video">
-      <p>Vidéo</p>
-    </div>
+
+
+<v-divider></v-divider>
+
+    <h2 class="pa-2 text-center purple lighten-2 float">VIDEO</h2><br>
+
 
     <div class="parent cateVideo">
       <div class="div1">
@@ -92,30 +100,33 @@
       </div>
     </div>
 
-    <div class="div1">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div2">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div3">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div4">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div5">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div6">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div7">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
-    <div class="div8">
-      <img src="https://via.placeholder.com/250" alt />
-    </div>
+     <v-row>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+      <v-col md="3">
+        <img src="https://via.placeholder.com/250" alt />
+      </v-col>
+    </v-row>
+<v-divider></v-divider>
   </v-container>
 </template>
 
