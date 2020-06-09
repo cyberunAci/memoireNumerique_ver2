@@ -1948,49 +1948,167 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _addMemoires_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addMemoires.vue */ "./resources/js/dashboard/components/addMemoires.vue");
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    addMemoires: _addMemoires_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       dialog: false,
       headers: [{
-        text: 'Dessert (100g serving)',
+        text: 'Titre',
         align: 'start',
         sortable: false,
-        value: 'name'
+        value: 'titre'
       }, {
-        text: 'Calories',
-        value: 'calories'
+        text: 'Resumé',
+        value: 'resumer'
       }, {
-        text: 'Fat (g)',
-        value: 'fat'
+        text: 'Description',
+        value: 'description'
       }, {
-        text: 'Carbs (g)',
-        value: 'carbs'
+        text: 'Auteur',
+        value: 'auteur'
       }, {
-        text: 'Protein (g)',
-        value: 'protein'
+        text: 'Catégorie',
+        value: 'id_categorie.nom'
+      }, {
+        text: 'Type de média',
+        value: 'media.type'
+      }, {
+        text: 'Image',
+        value: 'media.image'
+      }, {
+        text: 'video',
+        value: 'media.video'
+      }, {
+        text: 'status',
+        value: 'status.status'
       }, {
         text: 'Actions',
         value: 'actions',
         sortable: false
       }],
-      desserts: [],
-      editedIndex: -1,
-      editedItem: {
-        name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
-      },
-      defaultItem: {
-        name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
-      }
+      memoires: [],
+      toto: ''
     };
+  },
+  created: function created() {
+    this.getMemoires();
+  },
+  methods: {
+    getToto: function getToto() {
+      console.log(this.toto);
+    },
+    getMemoires: function getMemoires() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/memoires').then(function (data) {
+        data.data.data.forEach(function (memoire) {
+          _this.memoires.push(memoire);
+        });
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    memoires: {
+      "default": function _default() {
+        return {};
+      }
+    },
+    memoire: {
+      "default": false
+    },
+    isModification: {
+      "default": false
+    }
+  },
+  data: function data() {
+    var _ref;
+
+    return _ref = {
+      selectCategorie: [],
+      selectStatus: [],
+      selectMedia: [],
+      mediatype: [],
+      status: [],
+      dialog: false,
+      titre: '',
+      resumer: '',
+      description: '',
+      auteur: '',
+      categorie: ''
+    }, _defineProperty(_ref, "status", ''), _defineProperty(_ref, "media", ''), _defineProperty(_ref, "id", null), _ref;
+  },
+  created: function created() {
+    this.getAllSelect();
+  },
+  methods: {
+    addDatas: function addDatas() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/memoires', {
+        id: this.id,
+        titre: this.titre,
+        resumer: this.resumer,
+        description: this.description,
+        auteur: this.auteur,
+        id_categorie: this.categorie,
+        id_status: this.status,
+        id_media: this.media
+      }).then(function (_ref2) {
+        var data = _ref2.data;
+
+        _this.$emit('addMemoire', data.data);
+
+        if (_this.isModification) {
+          _this.$emit('addMemoire', [data.data.titre = _this.titre, data.data.resumer = _this.resumer, data.data.description = _this.description, data.data.auteur = _this.auteur, data.data.id_categorie.id = _this.categorie, data.data.status.id = _this.status, data.data.media.id_type.id = _this.media]);
+        }
+      });
+    },
+    getAllSelect: function getAllSelect() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/selects").then(function (select) {
+        select.data.categorie.forEach(function (categorie) {
+          return _this2.selectCategorie.push(categorie);
+        });
+        select.data.status.forEach(function (status) {
+          return _this2.selectStatus.push(status);
+        });
+        select.data.mediatype.forEach(function (mediatype) {
+          return _this2.selectMedia.push(mediatype);
+        });
+      });
+    },
+    editMemoire: function editMemoire(memoire) {
+      this.id = memoire.id;
+      this.titre = memoire.titre, this.resumer = memoire.resumer, this.description = memoire.description, this.auteur = memoire.auteur, this.categorie = memoire.id_categorie.id, this.status = memoire.status.id, this.media = memoire.media.id_type.id;
+    }
   }
 });
 
@@ -20295,8 +20413,420 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("v-data-table", {
     staticClass: "elevation-1",
-    attrs: { headers: _vm.headers, items: _vm.desserts }
+    attrs: { headers: _vm.headers, items: _vm.memoires, "items-per-page": 5 },
+    scopedSlots: _vm._u([
+      {
+        key: "top",
+        fn: function() {
+          return [
+            _c(
+              "v-toolbar",
+              { attrs: { flat: "", color: "white" } },
+              [
+                _c("v-spacer"),
+                _vm._v(" "),
+                _c("addMemoires", {
+                  on: {
+                    addMemoire: function($event) {
+                      return _vm.memoires.push($event)
+                    }
+                  }
+                })
+              ],
+              1
+            )
+          ]
+        },
+        proxy: true
+      },
+      {
+        key: "item.resumer",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.resumer) + ",")]
+        }
+      },
+      {
+        key: "item.description",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.description))]
+        }
+      },
+      {
+        key: "item.id_categorie.nom",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.id_categorie.nom))]
+        }
+      },
+      {
+        key: "item.media.image",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.media.image))]
+        }
+      },
+      {
+        key: "item.media.video",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.media.video))]
+        }
+      },
+      {
+        key: "item.status.status",
+        fn: function(ref) {
+          var item = ref.item
+          return [_vm._v(_vm._s(item.status.status))]
+        }
+      },
+      {
+        key: "item.actions",
+        fn: function(ref) {
+          var item = ref.item
+          return [
+            _c("addMemoires", {
+              attrs: { memoire: item, isModification: true },
+              on: {
+                addMemoire: function($event) {
+                  return _vm.memoires.push($event)
+                }
+              }
+            })
+          ]
+        }
+      }
+    ])
   })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-dialog",
+    {
+      attrs: { persistent: "", "max-width": "600px" },
+      scopedSlots: _vm._u([
+        {
+          key: "activator",
+          fn: function(ref) {
+            var on = ref.on
+            return [
+              _c(
+                "v-btn",
+                _vm._g(
+                  {
+                    attrs: {
+                      color: "teal",
+                      fab: "",
+                      dark: "",
+                      icon: "",
+                      small: ""
+                    }
+                  },
+                  on
+                ),
+                [
+                  !_vm.isModification
+                    ? _c("v-icon", [_vm._v("mdi-plus")])
+                    : _vm._e()
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                _vm._g(
+                  {
+                    attrs: {
+                      color: "teal",
+                      fab: "",
+                      dark: "",
+                      icon: "",
+                      small: ""
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.editMemoire(_vm.memoire)
+                      }
+                    }
+                  },
+                  on
+                ),
+                [
+                  _vm.isModification
+                    ? _c("v-icon", [_vm._v("mdi-pencil")])
+                    : _vm._e()
+                ],
+                1
+              )
+            ]
+          }
+        }
+      ]),
+      model: {
+        value: _vm.dialog,
+        callback: function($$v) {
+          _vm.dialog = $$v
+        },
+        expression: "dialog"
+      }
+    },
+    [
+      _vm._v(" "),
+      _c(
+        "v-card",
+        [
+          _c("v-card-title", [
+            !_vm.isModification
+              ? _c("span", { staticClass: "headline" }, [
+                  _vm._v("Ajouter une mémoire")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.isModification
+              ? _c("span", { staticClass: "headline" }, [
+                  _vm._v("Modifier une mémoire")
+                ])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c(
+            "v-card-text",
+            [
+              _c(
+                "v-container",
+                [
+                  _c(
+                    "v-row",
+                    [
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              color: "teal",
+                              label: "titre*",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.titre,
+                              callback: function($$v) {
+                                _vm.titre = $$v
+                              },
+                              expression: "titre"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              color: "teal",
+                              label: "resumer*",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.resumer,
+                              callback: function($$v) {
+                                _vm.resumer = $$v
+                              },
+                              expression: "resumer"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              color: "teal",
+                              label: "description*",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.description,
+                              callback: function($$v) {
+                                _vm.description = $$v
+                              },
+                              expression: "description"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              color: "teal",
+                              label: "auteur*",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.auteur,
+                              callback: function($$v) {
+                                _vm.auteur = $$v
+                              },
+                              expression: "auteur"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              items: _vm.selectCategorie,
+                              "item-value": "id",
+                              "item-text": "nom",
+                              label: "categories"
+                            },
+                            model: {
+                              value: _vm.categorie,
+                              callback: function($$v) {
+                                _vm.categorie = $$v
+                              },
+                              expression: "categorie"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              items: _vm.selectStatus,
+                              "item-value": "id",
+                              "item-text": "status",
+                              label: "Status"
+                            },
+                            model: {
+                              value: _vm.status,
+                              callback: function($$v) {
+                                _vm.status = $$v
+                              },
+                              expression: "status"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { cols: "12", sm: "6", md: "4" } },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              items: _vm.selectMedia,
+                              "item-value": "id",
+                              "item-text": "type",
+                              label: "Média"
+                            },
+                            model: {
+                              value: _vm.media,
+                              callback: function($$v) {
+                                _vm.media = $$v
+                              },
+                              expression: "media"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("small", [_vm._v("*Champ obligatoire")])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-card-actions",
+            [
+              _c("v-spacer"),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "teal", text: "" },
+                  on: {
+                    click: function($event) {
+                      _vm.dialog = false
+                    }
+                  }
+                },
+                [_vm._v("Fermer")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "teal", text: "" },
+                  on: {
+                    click: function($event) {
+                      ;(_vm.dialog = false), _vm.addDatas()
+                    }
+                  }
+                },
+                [_vm._v("Enregistrer")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -77827,6 +78357,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_addMemoires_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!./addMemoires.js?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_addMemoires_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/dashboard/components/addMemoires.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/dashboard/components/addMemoires.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addMemoires.vue?vue&type=template&id=55335672& */ "./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672&");
+/* harmony import */ var _addMemoires_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addMemoires.js?vue&type=script&lang=js& */ "./resources/js/dashboard/components/addMemoires.js?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _addMemoires_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/dashboard/components/addMemoires.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./addMemoires.vue?vue&type=template&id=55335672& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/dashboard/components/addMemoires.vue?vue&type=template&id=55335672&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addMemoires_vue_vue_type_template_id_55335672___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/dashboard/layouts/Layout.vue":
 /*!***************************************************!*\
   !*** ./resources/js/dashboard/layouts/Layout.vue ***!
@@ -78313,8 +78912,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/cyberun-1/PROJET/memoireNumerique/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/cyberun-1/PROJET/memoireNumerique/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/cyberun-6/projetLaravel/memoireNumerique_ver2/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/cyberun-6/projetLaravel/memoireNumerique_ver2/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
