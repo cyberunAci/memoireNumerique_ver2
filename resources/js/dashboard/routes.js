@@ -4,6 +4,8 @@ import App from './views/App.vue';
 import Service from './views/Service.vue';
 import Mediatheque from './views/Mediatheque.vue';
 import Administrateur from './views/Administrateur.vue';
+import Environnement from './views/Environnement.vue';
+
 
 Vue.use(VueRouter);
 
@@ -29,6 +31,11 @@ const router = new VueRouter({
             path: '/administrateur',
             name: 'administrateur',
             component: Administrateur, 
+        },
+        {
+            path: '/environnement',
+            name: 'environnement',
+            component: Environnement, 
         },
     ]
 })

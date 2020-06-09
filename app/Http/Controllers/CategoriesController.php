@@ -44,7 +44,7 @@ class CategoriesController extends Controller
         $memoires = Memoire::whereHas('categories', function (Builder $query) use ($environnement){
             $query->where('id_categorie', '=',  $environnement->id);
         })->get();
-        return view('client.environnement', ['memoires' => $memoires]);
+        return MemoiresRessource::collection($memoires);
     }
 
 }

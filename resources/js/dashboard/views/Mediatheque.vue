@@ -14,34 +14,34 @@
     </template>
 
     <v-row>
-      <v-col md="3">
-        <a href="/mediatheque/categorie/environnement">
+      <v-col md="3" sm="3">
+        <a href="/environnement">
           <img src="img/environnement-petit-triangle.jpg" alt />
         </a>
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <img src="img/audio-petit-triangle.jpg" alt />
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <img src="img/economie-petit-triangle.jpg" alt />
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <img src="img/environnement-image-petit-triangle.jpg" alt />
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <img src="img/histoire-petit-triangle.jpg" alt />
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <a href="/article">
           <img src="img/manuscrit-petit-triangle.jpg" alt />
         </a>
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <a href="/photo">
           <img src="img/photo_image-petit-triangle.jpg" alt />
         </a>
       </v-col>
-      <v-col md="3">
+      <v-col md="3" sm="3">
         <a href="/mediatheque/video">
           <img src="img/video_image-petit-triangle.jpg" alt />
         </a>
