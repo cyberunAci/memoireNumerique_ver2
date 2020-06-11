@@ -1,4 +1,5 @@
-import Axios from "axios";
+import { clientService } from "../_services/client.Service";
+
 export default {
     props: {
         memoires: {
@@ -39,7 +40,7 @@ export default {
     methods: {
 
         addDatas() {
-            Axios.post('api/memoires', {
+            clientService.post('/api/memoires/', {
                 id: this.id,
                 titre: this.titre,
                 resumer: this.resumer,
@@ -50,38 +51,27 @@ export default {
                 id_media: this.media
             }).then(({ data }) => {
                 this.$emit('addMemoire', data.data)
-                if (this.isModification) {
-                    this.$emit('addMemoire', [
-                        data.data.titre = this.titre,
-                        data.data.resumer = this.resumer,
-                        data.data.description = this.description,
-                        data.data.auteur = this.auteur,
-                        data.data.id_categorie.id = this.categorie,
-                        data.data.status.id = this.status,
-                        data.data.media.id_type.id = this.media
-                    ])
-                }
-
+                console.log(data.data)
             })
         },
 
         getAllSelect() {
 
-            Axios.get("/api/selects").then(select => {
+            clientService.get("/api/memoires/selects/").then(select => {
                 select.data.categorie.forEach(categorie => this.selectCategorie.push(categorie))
                 select.data.status.forEach(status => this.selectStatus.push(status))
                 select.data.mediatype.forEach(mediatype => this.selectMedia.push(mediatype))
             })
         },
         editMemoire(memoire) {
-            this.id = memoire.id
-            this.titre = memoire.titre,
-            this.resumer = memoire.resumer,
-            this.description = memoire.description,
-            this.auteur = memoire.auteur,
-            this.categorie = memoire.id_categorie.id,
-            this.status = memoire.status.id,
-            this.media = memoire.media.id_type.id
+            this.id = memoire.id,
+                this.titre = memoire.titre,
+                this.resumer = memoire.resumer,
+                this.description = memoire.description,
+                this.auteur = memoire.auteur,
+                this.categorie = memoire.id_categorie.id,
+                this.status = memoire.status.id,
+                this.media = memoire.media.id_type.id
         }
 
     },

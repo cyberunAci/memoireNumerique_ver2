@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use Illuminate\Database\Eloquent\Builder;
 use App\Http\Resources\CategoriesRessource;
 use App\Http\Resources\MediasRessource;
 use App\Http\Resources\MediaTypesRessource;
@@ -69,6 +70,18 @@ class MemoiresController extends Controller
 
         return ['categorie' => $cat, 'mediatype' => $med, 'status' => $stat];
     }
+    function deleteMemoires($id)
+    {
+        $data = Memoire::destroy($id) ? "Memoire bien supprimee" : "Erreur dans la suppression de la memoire";
+        return json_encode(["status" => $data]);
+    }
 
-    
+    function ordreDatas(Request $request) {
+        $environnement = Categories::where('nom','=','Environnement')->first();
+        $datas = Memoire::whereHas('categories', function (Builder $query) use ($environnement){
+            $query->where('id_categorie', '=',  $environnement->id);
+        })->orderBy('created_at', 'DESC')->get();
+        return MemoiresRessource::collection($datas);
+
+    }
 }

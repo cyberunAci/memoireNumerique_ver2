@@ -1,8 +1,12 @@
 import Axios from "axios";
 import addMemoires from "./addMemoires.vue";
+import deleteMemoires from "./deleteMemoires.vue";
+import { clientService } from "../_services/client.Service";
+
 export default {
   components: {
     addMemoires,
+    deleteMemoires
   },
   data: () => ({
     dialog: false,
@@ -37,7 +41,7 @@ export default {
     },
 
     getMemoires() {
-      Axios.get('api/memoires').then(data => {
+      clientService.get('/api/memoires').then(data => {
         data.data.data.forEach(memoire => {
           this.memoires.push(memoire)
         })
