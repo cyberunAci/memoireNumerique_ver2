@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import Embed from 'v-video-embed';
 import VueRouter from 'vue-router';
 import App from './views/App.vue';
 import Service from './views/Service.vue';
@@ -12,6 +13,7 @@ import { authenticationService } from './_services/authentication.service'
 
 
 Vue.use(VueRouter);
+Vue.use(Embed);
 
 const router = new VueRouter({
     mode: 'history',

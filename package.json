@@ -20,8 +20,14 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "v-video-embed": "^1.0.6",
         "vue": "^2.6.11",
         "vue-router": "^3.3.2",
+<<<<<<< HEAD
         "vuetify": "^2.2.34"
+=======
+        "vuetify": "^2.2.32",
+        "vuetify-media-player": "^0.8.1"
+>>>>>>> 3126d7c35aa282de751c766441bb98cda109b8f9
     }
 }

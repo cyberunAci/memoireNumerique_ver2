@@ -23,7 +23,19 @@ Route::post('/', 'MemoiresController@addOrUpdate');
 Route::delete('/{id}', 'MemoiresController@deleteMemoires');
 Route::get('/selects', 'MemoiresController@getAllSelect');
 });
+<<<<<<< HEAD
 
 Route::get('/environnement', 'CategoriesController@getEnvironnement');
 
+=======
+
+Route::get('memoires', 'MemoiresController@getMemoires');
+Route::post('memoires', 'MemoiresController@addOrUpdate');
+Route::get('selects', 'MemoiresController@getAllSelect');
+
+
+Route::get('/environnement', 'CategoriesController@getEnvironnement');
+
+Route::get('/video', 'MediathequeController@getAllVideo');
+>>>>>>> 3126d7c35aa282de751c766441bb98cda109b8f9
 

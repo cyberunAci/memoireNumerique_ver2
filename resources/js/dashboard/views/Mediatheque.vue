@@ -100,36 +100,22 @@
       </div>
     </div>
 
-     <v-row>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
+  <v-container fluid>
+   
+    <h2 class="pa-2 text-center float">Nos vidéos</h2><br>
+    <v-row>
+      <v-col md="3" v-for="(video, key) in mediathequeVideo" :key="key">
+        <video-embed :src="video.video" alt width="50%"></video-embed>
       </v-col>
     </v-row>
+  </v-container>
+
+
+
 <v-divider></v-divider>
   </v-container>
 </template>
 
 
 <script src="./mediatheque.js">
-</script>c
+</script>
