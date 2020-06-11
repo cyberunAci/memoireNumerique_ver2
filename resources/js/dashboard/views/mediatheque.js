@@ -26,15 +26,16 @@ export default {
     },
 
     created() {
-      this.getOneVideo()
+      this.getAllVideo()
   },
 
   methods: {
-    getOneVideo() {
+    getAllVideo() {
         Axios.get('/api/video').then(({ data }) => {
-            data.data.forEach(_video => {
+       
+           data.data.forEach(_video => {
                 this.mediathequeVideo.push(_video)
-            })
+            }) 
         })
     },
 

@@ -104,8 +104,14 @@
    
     <h2 class="pa-2 text-center float">Nos vidéos</h2><br>
     <v-row>
-      <v-col md="3" v-for="(video, key) in mediathequeVideo" :key="key">
-        <video-embed :src="video.video" alt width="50%"></video-embed>
+  
+      <v-col md="3" v-for="(memoire, key) in mediathequeVideo" :key="key">
+        <div>
+          <p>{{memoire.titre}}</p>
+          <p>{{memoire.description}}</p>
+          <video-embed :src="memoire.media.video" alt width="50%"></video-embed>
+          <p>{{memoire.auteur}}</p>
+        </div>
       </v-col>
     </v-row>
   </v-container>

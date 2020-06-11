@@ -56,6 +56,8 @@ class MemoiresController extends Controller
         return new MemoiresRessource($addToDb);
     }
 
+    
+
     public function getAllSelect()
     {
         //all categories
@@ -67,4 +69,6 @@ class MemoiresController extends Controller
 
         return ['categorie' => $cat, 'mediatype' => $med, 'status' => $stat];
     }
+
+    
 }

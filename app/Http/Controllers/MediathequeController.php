@@ -6,6 +6,8 @@ use App\Categories;
 use App\Http\Resources\CategoriesRessource;
 use App\Http\Resources\MediasRessource;
 use App\Media;
+use App\Memoire;
+use App\Http\Resources\MemoiresRessource;
 use Illuminate\Http\Request;
 
 class MediathequeController extends Controller
@@ -22,11 +24,11 @@ class MediathequeController extends Controller
 
     }
 
+   
     function getAllVideo() {
-        $video = Media::all();
-        return MediasRessource::collection($video);
+        $memoires = Memoire::all();
+        return MemoiresRessource::collection($memoires);
     }
-
     
     function getOneVideo($id) {
         $dataVideo = Media::find($id);
