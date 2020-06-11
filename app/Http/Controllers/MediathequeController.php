@@ -22,17 +22,21 @@ class MediathequeController extends Controller
 
     }
 
+    function getAllVideo() {
+        $video = Media::all();
+        return MediasRessource::collection($video);
+    }
+
+    
     function getOneVideo($id) {
         $dataVideo = Media::find($id);
         return view('client.video');
     }
 
+
     function vueEnvir() {
         return view('client.environnement');
     }
-    
-
-
 
     function types()
     {

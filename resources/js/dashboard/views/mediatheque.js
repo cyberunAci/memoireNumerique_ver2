@@ -1,4 +1,10 @@
+import Axios from "axios"
+
+
 export default {
+
+ 
+ 
     data () {
       return {
         colors: [
@@ -15,6 +21,23 @@ export default {
           'Fourth',
           'Fifth',
         ],
+        mediathequeVideo: [],
       }
     },
+
+    created() {
+      this.getOneVideo()
+  },
+
+  methods: {
+    getOneVideo() {
+        Axios.get('/api/video').then(({ data }) => {
+            data.data.forEach(_video => {
+                this.mediathequeVideo.push(_video)
+            })
+        })
+    },
+
+
+}
   }

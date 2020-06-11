@@ -21,4 +21,6 @@ class MediaController extends Controller
         return CategoriesRessource::collection($types);
     }
 
+   
+
 }
