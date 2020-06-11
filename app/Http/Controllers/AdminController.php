@@ -22,7 +22,6 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.dashboard');
-
     }
     public function memoiresView()
     {
@@ -46,7 +45,7 @@ class AdminController extends Controller
             'categories' => CategoriesRessource::collection($cat), //Renvoi data de catégorie vers la view
             'mediatypes' => MediaTypesRessource::collection($med), //Renvoi data de mediatype vers la view
             'status' => MemoireStatusRessource::collection($stat), //Renvoi data de status vers la view
-            ]);
+        ]);
     }
 
     public function descView()
@@ -62,11 +61,10 @@ class AdminController extends Controller
     {
 
         return view('admin.form');
-
     }
     // AJOUTER BDD
     public function add(Request $request)
-    {   
+    {
         $validator = Validator::make($request->all(), [
 
             'titre' => 'required',
@@ -107,8 +105,7 @@ class AdminController extends Controller
 
         $memoireM = Memoire::with(['media'])->where('id', $memoireM->id)->first();
 
-        return new MemoiresRessource($memoireM); 
-
+        return new MemoiresRessource($memoireM);
     }
 
     /* ADD CATEGORIE */
@@ -158,5 +155,4 @@ class AdminController extends Controller
         //TODO utiliser les ressources
         return json_encode(['status' => $status]);
     }
-
 }

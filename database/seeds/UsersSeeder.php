@@ -18,11 +18,21 @@ class UsersSeeder extends Seeder
                 'id' => 1,
                 'name' => 'admin',
                 'email' => 'admin.admin@gmail.com',
-                'password' => md5('admin')
-            ]
+                'password' => bcrypt('admin'),
+                "id_role"=>1,
+            ],
+            [
+            'id' => 2,
+            "name" => "Pierre",
+            "email"=>"pierre@user.com",
+            "password"=>bcrypt('user'),
+            "id_role"=>2,
+            ],      
         ];
+
         DB::table('users')->insert(
             $array
         );
+    
     }
 }

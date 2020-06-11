@@ -2,15 +2,14 @@
 
 namespace App;
 
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {   
     use HasApiTokens, Notifiable;
-    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -40,5 +39,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function roles()
+    {
+        return $this->belongsTo(RoleModel::class, 'id_role');
+    }
 
 }

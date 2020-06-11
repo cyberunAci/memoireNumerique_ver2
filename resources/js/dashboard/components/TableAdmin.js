@@ -1,34 +1,52 @@
+import Axios from "axios";
+import addMemoires from "./addMemoires.vue";
+import deleteMemoires from "./deleteMemoires.vue";
+import { clientService } from "../_services/client.Service";
+
 export default {
-    data: () => ({
-      dialog: false,
-      headers: [
-        {
-          text: 'Dessert (100g serving)',
-          align: 'start',
-          sortable: false,
-          value: 'name',
-        },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Actions', value: 'actions', sortable: false },
-      ],
-      desserts: [],
-      editedIndex: -1,
-      editedItem: {
-        name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0,
+  components: {
+    addMemoires,
+    deleteMemoires
+  },
+  data: () => ({
+    dialog: false,
+    headers: [
+      {
+        text: 'Titre',
+        align: 'start',
+        sortable: false,
+        value: 'titre',
       },
-      defaultItem: {
-        name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0,
-      },
-    }),
+      { text: 'Resumé', value: 'resumer' },
+      { text: 'Description', value: 'description' },
+      { text: 'Auteur', value: 'auteur' },
+      { text: 'Catégorie', value: 'id_categorie.nom' },
+      { text: 'Type de média', value: 'media.type' },
+      { text: 'Image', value: 'media.image' },
+      { text: 'video', value: 'media.video' },
+      { text: 'status', value: 'status.status' },
+      { text: 'Actions', value: 'actions', sortable: false },
+    ],
+    memoires: [],
+    toto: '',
+
+  }),
+  created() {
+    this.getMemoires()
+  },
+  methods: {
+
+    getToto() {
+      console.log(this.toto)
+    },
+
+    getMemoires() {
+      clientService.get('/api/memoires').then(data => {
+        data.data.data.forEach(memoire => {
+          this.memoires.push(memoire)
+        })
+      })
+    }
   }
+
+}
