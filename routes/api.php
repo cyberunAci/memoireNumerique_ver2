@@ -18,4 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/environnement', 'CategoriesController@getEnvironnement');
+Route::prefix('environnement')->group(function() {
+    Route::get('/', 'CategoriesController@getEnvironnement');
+    Route::get('/ordre', 'MemoiresController@ordreDatas');
+});
