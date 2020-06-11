@@ -14,7 +14,8 @@
     <template v-slot:item.media.video="{ item }">{{item.media.video}}</template>
     <template v-slot:item.status.status="{ item }">{{item.status.status}}</template>
     <template v-slot:item.actions="{ item }">
-      <addMemoires v-on:addMemoire="memoires.push($event)" :memoire="item" :isModification="true"></addMemoires>
+      <addMemoires v-on:addMemoires="memoires.push($event)" :memoire="item" :isModification="true"></addMemoires>
+      <deleteMemoires v-bind:memoires="memoires" v-bind:item="item"></deleteMemoires>
     </template>
   </v-data-table>
 </template>

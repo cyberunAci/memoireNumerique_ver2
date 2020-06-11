@@ -14,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/login', 'AuthController@login');
+Route::middleware('auth:api')->get('/logout', 'AuthController@logout');
+
+Route::middleware(['auth:api', 'roles:admin'])->prefix('memoires')->group(function(){
+Route::get('/', 'MemoiresController@getMemoires');
+Route::post('/', 'MemoiresController@addOrUpdate');
+Route::delete('/{id}', 'MemoiresController@deleteMemoires');
+Route::get('/selects', 'MemoiresController@getAllSelect');
 });
-<<<<<<< HEAD
-Route::get('memoires', 'MemoiresController@getMemoires');
-Route::post('memoires', 'MemoiresController@addOrUpdate');
-Route::get('selects', 'MemoiresController@getAllSelect');
-=======
 
 Route::get('/environnement', 'CategoriesController@getEnvironnement');
->>>>>>> 0b08ccc41b7453a81482dccb1969362d13863c2d
+
+

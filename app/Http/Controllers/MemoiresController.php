@@ -67,4 +67,9 @@ class MemoiresController extends Controller
 
         return ['categorie' => $cat, 'mediatype' => $med, 'status' => $stat];
     }
+    function deleteMemoires($id)
+    {
+        $data = Memoire::destroy($id) ? "Memoire bien supprimee" : "Erreur dans la suppression de la memoire";
+        return json_encode(["status" => $data]);
+    }
 }
