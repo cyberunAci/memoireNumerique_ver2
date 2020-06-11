@@ -11,14 +11,10 @@ use Illuminate\Database\Eloquent\Builder;
 class CategoriesController extends Controller
 {
 
-    public function categories()
+    public function getCategories()
     {
         //récupère les catégories
-        $categorie = Categories::with([
-            'categories',
-        ])
-            ->get();
-
+        $categorie = Categories::all();
         return CategoriesRessource::collection($categorie);
         }
     function index()

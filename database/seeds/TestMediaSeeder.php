@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Media;
+use Illuminate\Support\Facades\DB;
+
 class TestMediaSeeder extends Seeder
 {
     /**

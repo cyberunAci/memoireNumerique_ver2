@@ -18,6 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('memoires', 'MemoiresController@getMemoires');
+Route::post('memoires', 'MemoiresController@addOrUpdate');
+Route::get('selects', 'MemoiresController@getAllSelect');
+
+
 Route::get('/environnement', 'CategoriesController@getEnvironnement');
 
 Route::get('/video', 'MediathequeController@getAllVideo');
+
