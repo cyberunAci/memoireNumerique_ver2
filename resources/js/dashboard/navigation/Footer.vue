@@ -1,5 +1,5 @@
 <template>
-      <v-footer class="adminFooter blue-grey">
+      <v-footer color="blue-grey darken-1" class="adminFooter">
         <div class="adminFooterTexte">© MEMOIRE NUMERIQUE 2018-2020</div>
       </v-footer>
 </template>
@@ -10,7 +10,6 @@
   flex-flow: row;
   justify-content: flex-end;
   align-items: center;
-  background-color: darkgrey;
   height: 30px;
   position: fixed;
   bottom: 0;

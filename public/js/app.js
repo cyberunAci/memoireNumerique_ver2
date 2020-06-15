@@ -1969,12 +1969,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      drawer: false,
       currentUser: null
     };
   },
@@ -2458,7 +2477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.adminFooter[data-v-8f142a66] {\n  display: flex;\n  flex-flow: row;\n  justify-content: flex-end;\n  align-items: center;\n  background-color: darkgrey;\n  height: 30px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n.adminFooterTexte[data-v-8f142a66] {\n    position: relative;\n    right: 5%;\n}\n", ""]);
+exports.push([module.i, "\n.adminFooter[data-v-8f142a66] {\n  display: flex;\n  flex-flow: row;\n  justify-content: flex-end;\n  align-items: center;\n  height: 30px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n.adminFooterTexte[data-v-8f142a66] {\n    position: relative;\n    right: 5%;\n}\n", ""]);
 
 // exports
 
@@ -27523,11 +27542,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-footer", { staticClass: "adminFooter blue-grey" }, [
-    _c("div", { staticClass: "adminFooterTexte" }, [
-      _vm._v("© MEMOIRE NUMERIQUE 2018-2020")
-    ])
-  ])
+  return _c(
+    "v-footer",
+    { staticClass: "adminFooter", attrs: { color: "blue-grey darken-1" } },
+    [
+      _c("div", { staticClass: "adminFooterTexte" }, [
+        _vm._v("© MEMOIRE NUMERIQUE 2018-2020")
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -27552,25 +27575,132 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-row",
+    "v-layout",
+    { attrs: { row: "", "justify-center": "" } },
     [
       _c(
-        "v-col",
+        "v-app-bar",
+        {
+          staticClass: "hidden-xs-and-down",
+          attrs: { app: "", dark: "", color: "blue-grey darken-1" }
+        },
         [
+          _c("v-toolbar-title", [_vm._v("MÉMOIRE NUMÉRIQUE")]),
+          _vm._v(" "),
+          _c("v-spacer"),
+          _vm._v(" "),
           _c(
-            "v-card",
-            {
-              staticClass: "pa-5 d-flex flex-row align-items-center",
-              attrs: { outlined: "", tile: "" }
-            },
+            "v-toolbar-items",
             [
-              _c("h2", { staticClass: "d-flex flex-fill p-2 h-100" }, [
-                _vm._v("Dashboard")
-              ]),
+              _c(
+                "v-btn",
+                { staticClass: "padding d-flex", attrs: { text: "", to: "/" } },
+                [_vm._v("Accueil")]
+              ),
               _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "d-flex flex-row" },
+                "v-btn",
+                {
+                  staticClass: "padding d-flex",
+                  attrs: { text: "", to: "/service" }
+                },
+                [_vm._v("Service")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "padding d-flex",
+                  attrs: { text: "", to: "/mediatheque" }
+                },
+                [_vm._v("Médiathèque")]
+              ),
+              _vm._v(" "),
+              _vm.isAdmin
+                ? _c(
+                    "v-btn",
+                    {
+                      staticClass: "padding d-flex",
+                      attrs: { text: "", to: "/administrateur" }
+                    },
+                    [_vm._v("Administrateur")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isCheck
+                ? _c(
+                    "v-btn",
+                    {
+                      staticClass: "padding d-flex",
+                      attrs: { text: "" },
+                      on: {
+                        click: function($event) {
+                          return _vm.logout()
+                        }
+                      }
+                    },
+                    [_vm._v("Déconnexion")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.isCheck
+                ? _c(
+                    "v-btn",
+                    {
+                      staticClass: "padding d-flex",
+                      attrs: { text: "", to: "/login" }
+                    },
+                    [_vm._v("Connexion")]
+                  )
+                : _vm._e()
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-app-bar",
+        {
+          staticClass: "hidden-sm-and-up",
+          attrs: { app: "", dark: "", color: "blue-grey darken-1" }
+        },
+        [
+          _c("v-toolbar-title", [_vm._v("MÉMOIRE NUMÉRIQUE")]),
+          _vm._v(" "),
+          _c("v-spacer"),
+          _vm._v(" "),
+          _c("v-app-bar-nav-icon", {
+            on: {
+              click: function($event) {
+                _vm.drawer = true
+              }
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: { absolute: "", temporary: "" },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
+        [
+          _c(
+            "v-list",
+            { attrs: { nav: "", dense: "" } },
+            [
+              _c(
+                "v-list-item-group",
                 [
                   _c(
                     "v-btn",
@@ -27642,7 +27772,8 @@ var render = function() {
                 ],
                 1
               )
-            ]
+            ],
+            1
           )
         ],
         1

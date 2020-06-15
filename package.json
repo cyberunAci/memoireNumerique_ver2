@@ -20,6 +20,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "chokidar": "^3.4.0",
         "rxjs": "^6.5.5",
         "v-video-embed": "^1.0.6",
         "vue": "^2.6.11",
