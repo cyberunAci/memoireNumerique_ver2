@@ -1987,6 +1987,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -27627,6 +27629,15 @@ var render = function() {
                   )
                 : _vm._e(),
               _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "padding d-flex",
+                  attrs: { text: "", to: "/apropos" }
+                },
+                [_vm._v("À propos")]
+              ),
+              _vm._v(" "),
               _vm.isCheck
                 ? _c(
                     "v-btn",
@@ -27742,6 +27753,15 @@ var render = function() {
                         [_vm._v("Administrateur")]
                       )
                     : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "padding d-flex",
+                      attrs: { text: "", to: "/apropos" }
+                    },
+                    [_vm._v("À propos")]
+                  ),
                   _vm._v(" "),
                   _vm.isCheck
                     ? _c(
@@ -86470,6 +86490,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
     meta: {
       authorize: []
     }
+  }, {
+    path: '/apropos',
+    name: 'apropos',
+    component: _views_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }]
 });
 router.beforeEach(function (to, from, next) {

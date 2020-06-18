@@ -8,6 +8,7 @@
         <v-btn class="padding d-flex" text to="/service">Service</v-btn>
         <v-btn class="padding d-flex" text to="/mediatheque">Médiathèque</v-btn>
         <v-btn class="padding d-flex" text v-if="isAdmin" to="/administrateur">Administrateur</v-btn>
+        <v-btn class="padding d-flex" text to="/apropos">À propos</v-btn>
         <v-btn class="padding d-flex" text v-if="isCheck"  @click="logout()">Déconnexion</v-btn>
         <v-btn class="padding d-flex" text v-if="!isCheck"  to="/login">Connexion</v-btn>
       </v-toolbar-items>
@@ -26,6 +27,7 @@
           <v-btn class="padding d-flex" text to="/service">Service</v-btn>
           <v-btn class="padding d-flex" text to="/mediatheque">Médiathèque</v-btn>
           <v-btn v-if="isAdmin" Fclass="padding d-flex" text to="/administrateur">Administrateur</v-btn>
+          <v-btn class="padding d-flex" text to="/apropos">À propos</v-btn>
           <v-btn v-if="isCheck" class="padding d-flex" text @click="logout()">Déconnexion</v-btn>
           <v-btn v-if="!isCheck" class="padding d-flex" text to="/login">Connexion</v-btn>
         </v-list-item-group>

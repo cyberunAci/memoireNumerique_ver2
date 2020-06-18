@@ -50,6 +50,11 @@ const router = new VueRouter({
             component: Login,
             meta: { authorize: [] }
         },
+        {
+            path: '/apropos',
+            name: 'apropos',
+            component: App,
+        },
     ]
 })
 
