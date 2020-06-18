@@ -1987,8 +1987,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -27609,15 +27607,6 @@ var render = function() {
                 [_vm._v("Service")]
               ),
               _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  staticClass: "padding d-flex",
-                  attrs: { text: "", to: "/mediatheque" }
-                },
-                [_vm._v("Médiathèque")]
-              ),
-              _vm._v(" "),
               _vm.isAdmin
                 ? _c(
                     "v-btn",
@@ -27729,15 +27718,6 @@ var render = function() {
                       attrs: { text: "", to: "/service" }
                     },
                     [_vm._v("Service")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "padding d-flex",
-                      attrs: { text: "", to: "/mediatheque" }
-                    },
-                    [_vm._v("Médiathèque")]
                   ),
                   _vm._v(" "),
                   _vm.isAdmin
@@ -86462,16 +86442,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
   mode: 'history',
   routes: [{
     path: '/',
-    name: 'accueil',
-    component: _views_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    name: 'mediatheque',
+    component: _views_Mediatheque_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '/service',
     name: 'service',
     component: _views_Service_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/mediatheque',
-    name: 'mediatheque',
-    component: _views_Mediatheque_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '/administrateur',
     name: 'administrateur',

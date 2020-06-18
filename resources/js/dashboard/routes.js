@@ -20,18 +20,13 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'accueil',
-            component: App,
+            name: 'mediatheque',
+            component: Mediatheque,
         },
         {
             path: '/service',
             name: 'service',
             component: Service, 
-        },
-        {
-            path: '/mediatheque',
-            name: 'mediatheque',
-            component: Mediatheque, 
         },
         {
             path: '/administrateur',
