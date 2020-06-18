@@ -26,8 +26,8 @@ class MediathequeController extends Controller
 
    
     function getAllVideo() {
-        $memoires = Memoire::all();
-        return MemoiresRessource::collection($memoires);
+        $memoires = Media::all();
+        return MediasRessource::collection($memoires);
     }
     
     function getOneVideo($id) {

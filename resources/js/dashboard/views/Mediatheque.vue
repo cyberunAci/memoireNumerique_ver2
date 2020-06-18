@@ -109,7 +109,7 @@
         <div>
           <p>{{memoire.titre}}</p>
           <p>{{memoire.description}}</p>
-          <video-embed :src="memoire.media.video" alt width="50%"></video-embed>
+          <video-embed :src="memoire.video" alt width="50%"></video-embed>
           <p>{{memoire.auteur}}</p>
         </div>
       </v-col>
