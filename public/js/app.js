@@ -2424,7 +2424,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       colors: ['indigo', 'warning', 'pink darken-2', 'red lighten-1', 'deep-purple accent-4'],
       slides: ['First', 'Second', 'Third', 'Fourth', 'Fifth'],
-      mediathequeVideo: []
+      mediathequeVideo: [],
+      show: false
     };
   },
   created: function created() {
@@ -28390,55 +28391,90 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-row",
-        [
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ])
-        ],
+        _vm._l(_vm.mediathequeVideo, function(memoire, key) {
+          return _c(
+            "v-card",
+            {
+              key: key,
+              staticClass: "mx-auto",
+              attrs: { "max-width": "344", padding: "10" }
+            },
+            [
+              _c("video-embed", {
+                attrs: { src: memoire.video, alt: "", width: "50%" }
+              }),
+              _vm._v(" "),
+              _c("v-card-title", [
+                _vm._v("\n      Top western road trips\n    ")
+              ]),
+              _vm._v(" "),
+              _c("v-card-subtitle", [
+                _vm._v("\n      1,000 miles of wonder\n    ")
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c("v-btn", { attrs: { color: "purple", text: "" } }, [
+                    _vm._v("\n        Explore\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { icon: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.show = !_vm.show
+                        }
+                      }
+                    },
+                    [
+                      _c("v-icon", [
+                        _vm._v(
+                          _vm._s(
+                            _vm.show ? "mdi-chevron-up" : "mdi-chevron-down"
+                          )
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-expand-transition", [
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.show,
+                        expression: "show"
+                      }
+                    ]
+                  },
+                  [
+                    _c("v-divider"),
+                    _vm._v(" "),
+                    _c("v-card-text", [
+                      _vm._v(
+                        "\n          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.\n        "
+                      )
+                    ])
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        }),
         1
       ),
       _vm._v(" "),
@@ -28467,23 +28503,88 @@ var render = function() {
           _c(
             "v-row",
             _vm._l(_vm.mediathequeVideo, function(memoire, key) {
-              return _c("v-col", { key: key, attrs: { md: "3" } }, [
-                _c(
-                  "div",
-                  [
-                    _c("p", [_vm._v(_vm._s(memoire.titre))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(memoire.description))]),
-                    _vm._v(" "),
-                    _c("video-embed", {
-                      attrs: { src: memoire.video, alt: "", width: "50%" }
-                    }),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(memoire.auteur))])
-                  ],
-                  1
-                )
-              ])
+              return _c(
+                "v-card",
+                {
+                  key: key,
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "344", padding: "10" }
+                },
+                [
+                  _c("video-embed", {
+                    attrs: { src: memoire.video, alt: "", width: "50%" }
+                  }),
+                  _vm._v(" "),
+                  _c("v-card-title", [
+                    _vm._v("\n      Top western road trips\n    ")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-subtitle", [
+                    _vm._v("\n      1,000 miles of wonder\n    ")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-btn", { attrs: { color: "purple", text: "" } }, [
+                        _vm._v("\n        Explore\n      ")
+                      ]),
+                      _vm._v(" "),
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.show = !_vm.show
+                            }
+                          }
+                        },
+                        [
+                          _c("v-icon", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.show ? "mdi-chevron-up" : "mdi-chevron-down"
+                              )
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-expand-transition", [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.show,
+                            expression: "show"
+                          }
+                        ]
+                      },
+                      [
+                        _c("v-divider"),
+                        _vm._v(" "),
+                        _c("v-card-text", [
+                          _vm._v(
+                            "\n          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.\n        "
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
             }),
             1
           )
