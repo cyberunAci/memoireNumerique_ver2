@@ -28476,7 +28476,7 @@ var render = function() {
                     _c("p", [_vm._v(_vm._s(memoire.description))]),
                     _vm._v(" "),
                     _c("video-embed", {
-                      attrs: { src: memoire.media.video, alt: "", width: "50%" }
+                      attrs: { src: memoire.video, alt: "", width: "50%" }
                     }),
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(memoire.auteur))])
