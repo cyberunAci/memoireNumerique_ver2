@@ -25,8 +25,8 @@
         "v-video-embed": "^1.0.6",
         "vue": "^2.6.11",
         "vue-embed": "^2.1.1",
-        "vue-router": "^3.3.2",
-        "vuetify": "^2.2.34",
+        "vue-router": "^3.3.4",
+        "vuetify": "^2.3.2",
         "vuetify-media-player": "^0.8.1"
     }
 }
