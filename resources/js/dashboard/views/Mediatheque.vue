@@ -58,32 +58,27 @@
     <h2 class="pa-2 text-center purple lighten-2 float">AUDIO</h2><br>
 
 
+    <div class="parent cateVideo">
+      <div class="div1">
+        <a href="/mediatheque/1">
+          <!-- <img src="" alt="" > -->
+        </a>
+      </div>
+    </div>
+
+  <v-container fluid>
+   
     <v-row>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
-      </v-col>
-      <v-col md="3">
-        <img src="https://via.placeholder.com/250" alt />
+      <v-col md="3" v-for="(memoire, key) in mediathequeVideo" :key="key">
+        <div>
+          <p>{{memoire.titre}}</p>
+          <p>{{memoire.description}}</p>
+          <video-embed :src="memoire.video" alt width="50%"></video-embed>
+          <p>{{memoire.auteur}}</p>
+        </div>
       </v-col>
     </v-row>
+  </v-container>
 
 
 
@@ -102,9 +97,7 @@
 
   <v-container fluid>
    
-    <h2 class="pa-2 text-center float">Nos vidéos</h2><br>
     <v-row>
-  
       <v-col md="3" v-for="(memoire, key) in mediathequeVideo" :key="key">
         <div>
           <p>{{memoire.titre}}</p>

@@ -33,4 +33,6 @@ Route::get('/environnement', 'CategoriesController@getEnvironnement');
 
 Route::get('/video', 'MediathequeController@getAllVideo');
 
+Route::get('/audio', 'MediathequeController@getAllAudio');
+
 

@@ -24,15 +24,26 @@ class MediathequeController extends Controller
 
     }
 
-   
+   // POUR RÉCUPERER TOUTES LES VIDEOS 
     function getAllVideo() {
         $memoires = Media::all();
         return MediasRessource::collection($memoires);
     }
-    
+   // POUR RÉCUPERER UNE SEULE VIDEO  
     function getOneVideo($id) {
         $dataVideo = Media::find($id);
         return view('client.video');
+    }
+
+    // POUR RÉCUPERER TOUTES LES AUDIOS
+    function getAllAudio() {
+        $memoires = Media::all();
+        return MediasRessource::collection($memoires);
+    }
+   // POUR RÉCUPERER UNE SEULE AUDIO  
+    function getOneAudio($id) {
+        $dataVideo = Media::find($id);
+        return view('client.audio');
     }
 
 

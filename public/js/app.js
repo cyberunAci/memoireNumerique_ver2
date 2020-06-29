@@ -28388,56 +28388,39 @@ var render = function() {
       ]),
       _c("br"),
       _vm._v(" "),
+      _c("div", { staticClass: "parent cateVideo" }, [
+        _c("div", { staticClass: "div1" }, [
+          _c("a", { attrs: { href: "/mediatheque/1" } })
+        ])
+      ]),
+      _vm._v(" "),
       _c(
-        "v-row",
+        "v-container",
+        { attrs: { fluid: "" } },
         [
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { md: "3" } }, [
-            _c("img", {
-              attrs: { src: "https://via.placeholder.com/250", alt: "" }
-            })
-          ])
+          _c(
+            "v-row",
+            _vm._l(_vm.mediathequeVideo, function(memoire, key) {
+              return _c("v-col", { key: key, attrs: { md: "3" } }, [
+                _c(
+                  "div",
+                  [
+                    _c("p", [_vm._v(_vm._s(memoire.titre))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(memoire.description))]),
+                    _vm._v(" "),
+                    _c("video-embed", {
+                      attrs: { src: memoire.video, alt: "", width: "50%" }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(memoire.auteur))])
+                  ],
+                  1
+                )
+              ])
+            }),
+            1
+          )
         ],
         1
       ),
@@ -28459,11 +28442,6 @@ var render = function() {
         "v-container",
         { attrs: { fluid: "" } },
         [
-          _c("h2", { staticClass: "pa-2 text-center float" }, [
-            _vm._v("Nos vidéos")
-          ]),
-          _c("br"),
-          _vm._v(" "),
           _c(
             "v-row",
             _vm._l(_vm.mediathequeVideo, function(memoire, key) {
