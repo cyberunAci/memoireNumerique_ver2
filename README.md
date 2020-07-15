@@ -120,9 +120,12 @@ Faire un php artisan migrate et un php artisan db:seed pour migrer votre base de
 
 
 Puis lancez : 
-...
+
 php artisan serve
 
 npm run dev ou npm run watch
-...
+
+```
+npm start
+```
 
