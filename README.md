@@ -103,7 +103,7 @@ cd ./memoireNumerique_ver2
 Télécharger l'ensemble des dépendances :
 
 ```
-Composer install (si besoin)
+composer install (si besoin)
 npm install (si besoin)
 npm install vue
 npm install vuetify
