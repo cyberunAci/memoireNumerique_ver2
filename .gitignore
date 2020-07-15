@@ -1,8 +1,4 @@
 ./node_modules
-<<<<<<< HEAD
-./vendor
-.env
-=======
 ./public/hot
 ./public/storage
 ./storage/*.key
@@ -14,4 +10,3 @@
 .Homestead.yaml
 .npm-debug.log
 .yarn-error.log
->>>>>>> 40061df06f20ec509c76911e306e7586b6f7d000
