@@ -104,8 +104,6 @@ npm vue-router
 
 Modifier le fichier .env DB_DATABASE= {votre nom de Base de donnée)
 
-Faire un php artisan migrate et un php artisan db:seed pour migrer votre base de donnée
-
 php artisan key:generate si : 
 
 L'exécution php artisan key:generate dans un projet Laravel où le .envfichier ne contient pas la ligne  APP_KEY= entraîne la sortie suivante:
@@ -118,10 +116,13 @@ Cependant, la clé n'est pas écrite dans le .envfichier, donc le message d'éta
 Créez un fichier .env sans APP_KEY=.
 Faire un php artisan key:generate
 
-Puis lancez : 
+Faire un php artisan migrate et un php artisan db:seed pour migrer votre base de donnée
 
+
+Puis lancez : 
+...
 php artisan serve
 
 npm run dev ou npm run watch
-
+...
 
