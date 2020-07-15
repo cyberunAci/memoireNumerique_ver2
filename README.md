@@ -77,3 +77,51 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Prérequis
+
+Installation de Composer: https://getcomposer.org/doc/00-intro.md
+
+## Installation
+Voici étape par étape, l'installation du projet sur votre machine.
+
+Récupérer le dossier 'memoireNumerique_ver2' que vous placerez à l'endroit qui vous convient le plus.
+
+git clone https://{votre répertoire}/memoireNumerique_ver2.git
+
+Puis déplacez vous dans le repertoire en question
+
+cd ./memoireNumerique_ver2
+
+Télécharger l'ensemble des dépendances :
+
+Composer install (si besoin)
+npm install (si besoin)
+npm install vue
+npm install vuetify
+npm vue-router
+
+Modifier le fichier .env DB_DATABASE= {votre nom de Base de donnée)
+
+Faire un php artisan migrate et un php artisan db:seed pour migrer votre base de donnée
+
+php artisan key:generate si : 
+
+L'exécution php artisan key:generate dans un projet Laravel où le .envfichier ne contient pas la ligne  APP_KEY= entraîne la sortie suivante:
+
+Application key [base64:KEY_HERE=] set successfully.
+
+Cependant, la clé n'est pas écrite dans le .envfichier, donc le message d'état est incorrect.
+
+Étapes à reproduire:
+Créez un fichier .env sans APP_KEY=.
+Faire un php artisan key:generate
+
+Puis lancez : 
+
+php artisan serve
+
+npm run dev ou npm run watch
+
+
