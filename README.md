@@ -108,7 +108,10 @@ npm install
 ```
 
 ```
+A partir du fichier .env.exemple creer une copie nommée .env
+Creer une base de donnée nommée db_memoire-numerique avec phpmyadmin
 Modifier le fichier .env DB_DATABASE= db_memoire-numerique
+
 ```
 
 ```
@@ -137,4 +140,6 @@ php artisan serve
 npm run watch
 
 ```
+le site se lance avec l'URL  http://127.0.0.1:8000
+les mots de passe sont situés dans database/seeds/UsersSeeder.php
 
