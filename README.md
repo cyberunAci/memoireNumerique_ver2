@@ -103,15 +103,12 @@ cd ./memoireNumerique_ver2
 Télécharger l'ensemble des dépendances :
 
 ```
-composer install (si besoin)
-npm install (si besoin)
-npm install vue
-npm install vuetify
-npm vue-router
+composer install 
+npm install 
 ```
 
 ```
-Modifier le fichier .env DB_DATABASE= {votre nom de Base de donnée)
+Modifier le fichier .env DB_DATABASE= db_memoire-numerique
 ```
 
 ```
@@ -130,14 +127,14 @@ Faire un php artisan key:generate
 
 ```
 Faire un php artisan migrate et un php artisan db:seed pour migrer votre base de donnée
-
+Faire un php artisan passport:install pour créer une clé client pour passport
 ```
 
 Puis lancez : 
 
 ```
 php artisan serve
-npm run dev ou npm run watch
+npm run watch
 
 ```
 
