@@ -1,0 +1,50 @@
+Formulaire de connexion 
+
+
+input Email : 
+
+-lettres + @ + lettres + . + lettres -> Accepter
+
+input mot de passe :
+
+-lettres, chiffres et caractères spéciaux -> Accepter
+
+
+
+
+Formulaire ajout d'une mémoire 
+
+
+input Titre : 
+
+-lettres uniquement -> Accepter
+
+
+input Resumer :
+
+-paragraphe -> Accepter 
+
+
+input Description :
+
+-paragraphe -> Accepter 
+
+
+input Auteur :
+
+-lettres uniquement -> Accepter 
+
+
+input Categories :
+
+-categories -> Séléctionner 
+
+
+input Status :
+
+-status -> Séléctionner 
+
+
+input Média :
+
+-média -> Séléctionner 
